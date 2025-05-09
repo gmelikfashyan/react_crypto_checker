@@ -1,0 +1,144 @@
+.container {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: auto;
+}
+
+.title {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: #fff;
+}
+
+.tableWrapper {
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+.cryptoTable {
+    width: 100%;
+    min-width: 800px;
+    border-collapse: collapse;
+    font-size: 0.95rem;
+    font-weight: 600;
+    background-color: #000;
+    color: #fff;
+}
+
+.cryptoTable th,
+.cryptoTable td {
+    padding: 1rem;
+    text-align: right;
+    border-bottom: 1px solid #333;
+}
+
+.cryptoTable th {
+    text-align: right;
+    background-color: #111;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    color: #fff;
+}
+
+.buttonSort {
+    all: unset;
+    display: inline;
+    padding: 0 0.2rem;
+    margin: 0;
+    border: none;
+    background: none;
+    font: inherit;
+    color: #666;
+    cursor: pointer;
+}
+
+.buttonSort:hover {
+    color: #fff;
+}
+
+.coinInfo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    text-align: left;
+}
+
+.token {
+    color: #888;
+}
+
+.positive {
+    color: #10b981;
+}
+
+.negative {
+    color: #ef4444;
+}
+
+.loading {
+    padding: 2rem;
+    text-align: center;
+    color: #fff;
+}
+
+/* Column width classes */
+.rankColumn {
+    width: 5%;
+}
+
+.coinColumn {
+    width: 20%;
+    text-align: left !important;
+}
+
+.priceColumn {
+    width: 15%;
+}
+
+.changeColumn {
+    width: 15%;
+}
+
+.marketCapColumn {
+    width: 20%;
+}
+
+.volumeColumn {
+    width: 25%;
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 0.5rem;
+    }
+
+    .cryptoTable th,
+    .cryptoTable td {
+        padding: 0.75rem 0.5rem;
+        font-size: 0.85rem;
+    }
+
+    .coinInfo {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.2rem;
+    }
+
+    .coinInfo img {
+        margin-right: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .cryptoTable th,
+    .cryptoTable td {
+        padding: 0.5rem 0.3rem;
+        font-size: 0.75rem;
+    }
+
+    .buttonSort {
+        padding: 0 0.1rem;
+    }
+}
