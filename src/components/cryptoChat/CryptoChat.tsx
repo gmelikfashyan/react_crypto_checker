@@ -14,10 +14,11 @@ export default function CryptoChat() {
   const [username, setUsername] = useState('');
 
   useEffect(() => {
-    const newSocket = io("ws://89.169.168.253:4500", {
-      transports: ["websocket"],
+    const newSocket = io('wss://89.169.168.253:4500', {
+      transports: ['websocket', "polling"],
       secure: false,
-      timestampRequests: false,
+      rejectUnauthorized: false,
+      timeout: 10000,
     });
 
     newSocket.on('connect', () => {
